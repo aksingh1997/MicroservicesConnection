@@ -1,10 +1,14 @@
 package com.abhi.OrderService;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 @Data
-@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     private int id;
     private String userName;

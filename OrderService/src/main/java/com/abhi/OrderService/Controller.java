@@ -11,7 +11,7 @@ public class Controller {
     @Autowired
     OrderBuildService service;
 
-    @GetMapping("/prepareOrder/{userid}/{foodId}")
+    @GetMapping("/prepareOrder/{userId}/{foodId}")
     public Order prepareOrder(@PathVariable int userId, @PathVariable  int foodId) throws Exception {
         return service.buildOrder(userId, foodId);
     }

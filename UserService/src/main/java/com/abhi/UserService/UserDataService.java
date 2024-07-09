@@ -15,6 +15,11 @@ public class UserDataService {
     }
 
     public User getUser(int id) {
-        return userList.stream().filter(x -> x.getId() == id).findAny().orElseThrow();
+        try {
+            return userList.stream().filter(x -> x.getId() == id).findAny().orElseThrow();
+        } catch (Exception ex) {
+            System.out.println("nhi h bhai koi user is Id se");
+        }
+        return null;
     }
 }
